@@ -1,0 +1,27 @@
+.App {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+}
+
+@keyframes animatedBackground {
+  from { background-position: 0 0; }
+  to { background-position: 100% 100%}
+}
+
+#animate-area	{
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/1/1c/Quotation_Marks.svg");
+  background-position: 0px;
+  background-color: #eee;
+
+  animation: animatedBackground 80s linear infinite;
+}
+
+#quote-box {
+  padding: 20px;
+  width: 80vw;
+  text-align: center;
+  background-color: white;
+  border: 1px solid lightgrey;
+}
