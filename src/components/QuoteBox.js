@@ -10,7 +10,6 @@ class QuoteBox extends Component {
         super(props);
         this.state = {
             quote: '',
-            randomPage: 1,
         };
         this.tweetQuote = this.tweetQuote.bind(this);
         this.getQuote = this.getQuote.bind(this);
@@ -25,14 +24,9 @@ class QuoteBox extends Component {
     }
 
     getQuote() {
-        this.setState({
-            randomPage: Math.floor(Math.random() * 42),
-        });
-        console.log(this.state.counter);
-        const url = 'https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=' +
-            this.state.randomPage;
+        const url = 'https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1';
 
-        fetch(url).then(response => response.json())
+        fetch(url, {cache: "reload"}).then(response => response.json())
             .then(data => {
                 let quote = data[0].content.replace(/<\/?[^>]+(>|$)/g, "").trim();
                 quote = quote.replace(/;/g, ",");

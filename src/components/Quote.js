@@ -1,22 +1,9 @@
 import React, { Component } from 'react';
 
-class Quote extends Component {
+class Quote extends Component {  // functional components since these are so simple
+  // look into peer component: only update when props not the same
   constructor(props) {
     super(props);
-    this.state = {
-    }
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return true;
-  }
-
-  componentWillReceiveProps(nextProps) {
-    console.log('Receiving new props...');
-  }
-
-  componentDidUpdate() {
-    console.log('Component re-rendered.');
   }
 
   render() {
