@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 // import * as quoteActions from '../actions/quote';
 import Quote from './Quote';
 import Author from './Author';
+import twitter from '../img/twitter.png';
+import shuffle from '../img/shuffle.png';
 
 class QuoteBox extends Component {
     constructor(props) {
@@ -49,15 +51,16 @@ class QuoteBox extends Component {
     render() {
         return (
             <div className="QuoteBox" id="quote-box">
-                <h2>Quote:</h2>
-                <Quote quote={this.state.quote} />
-                <Author author={this.state.author} />
-                <button onClick={this.getQuote} id="new-quote">
-                    New quote
-                </button>
-                <button onClick={this.tweetQuote} id="tweet-quote">
-                    Tweet quote
-                </button>
+                <div id="controls">
+                    <input type="image" name="submit" value="submit" src={shuffle} onClick={this.getQuote}
+                           id="new-quote" />
+                    <input type="image" name="submit" value="submit" src={twitter} onClick={this.tweetQuote}
+                           id="tweet-quote"/>
+                </div>
+                <div id="quote-content-wrapper">
+                    <Quote quote={this.state.quote} />
+                    <Author author={this.state.author} />
+                </div>
             </div>
 
         );

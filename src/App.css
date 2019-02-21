@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 .App {
   display: flex;
   justify-content: center;
@@ -14,14 +16,55 @@
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/1/1c/Quotation_Marks.svg");
   background-position: 0px;
   background-color: #eee;
-
   animation: animatedBackground 80s linear infinite;
 }
 
 #quote-box {
   padding: 20px;
+  min-height: 40vh;
   width: 80vw;
   text-align: center;
   background-color: white;
   border: 1px solid lightgrey;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+#text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+}
+
+#author {
+  font-family: "Courier New", monospace;
+}
+
+#tweet-quote {
+  max-height: 46px;
+  max-width: 46px;
+  height: auto;
+  width: auto;
+}
+
+#new-quote {
+  max-height: 36px;
+  max-width: 36px;
+  height: auto;
+  width: auto;
+  border: 4px solid black;
+  border-radius: 8px;
+}
+
+#controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+#quote-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
