@@ -25,6 +25,7 @@ class QuoteBox extends Component {
 
     getQuote() {
         const url = 'https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1';
+        // look into HTML entity encoding
 
         fetch(url, {cache: "reload"}).then(response => response.json())
             .then(data => {
