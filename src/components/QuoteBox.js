@@ -52,9 +52,9 @@ class QuoteBox extends Component {
         return (
             <div className="QuoteBox" id="quote-box">
                 <div id="controls">
-                    <input type="image" name="submit" value="submit" src={shuffle} onClick={this.getQuote}
+                    <input type="image" class="img-button" name="submit" value="submit" src={shuffle} onClick={this.getQuote}
                            id="new-quote" />
-                    <input type="image" name="submit" value="submit" src={twitter} onClick={this.tweetQuote}
+                    <input type="image" class="img-button" name="submit" value="submit" src={twitter} onClick={this.tweetQuote}
                            id="tweet-quote"/>
                 </div>
                 <div id="quote-content-wrapper">

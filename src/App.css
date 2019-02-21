@@ -5,30 +5,34 @@
   justify-content: center;
   min-height: 100vh;
   align-items: center;
+  background-color: ghostwhite;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/1c/Quotation_Marks.svg');
+  background-repeat: repeat-x;
+  background-position: center;
 }
 
-@keyframes animatedBackground {
-  from { background-position: 0 0; }
-  to { background-position: 100% 100%}
-}
+/*@keyframes animatedBackground {*/
+  /*from { background-position: 0 0; }*/
+  /*to { background-position: 100% 100%}*/
+/*}*/
 
-#animate-area	{
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/1/1c/Quotation_Marks.svg");
-  background-position: 0px;
-  background-color: #eee;
-  animation: animatedBackground 80s linear infinite;
-}
+/*#animate-area	{*/
+  /*background-image: url("/img/quotation-marks.svg");*/
+  /*background-position: 0px;*/
+  /*background-color: #eee;*/
+  /*animation: animatedBackground 80s linear infinite;*/
+/*}*/
 
 #quote-box {
   padding: 20px;
-  min-height: 40vh;
-  width: 80vw;
-  text-align: center;
+  width: 60vw;
+  min-height: 30vh;
   background-color: white;
   border: 1px solid lightgrey;
   display: flex;
   flex-direction: row;
   align-content: center;
+  justify-content: center;
 }
 
 #text {
@@ -38,33 +42,29 @@
 
 #author {
   font-family: "Courier New", monospace;
+  font-size: 1.2em;
 }
 
-#tweet-quote {
-  max-height: 46px;
-  max-width: 46px;
-  height: auto;
-  width: auto;
-}
-
-#new-quote {
+.img-button {
+  margin: 5px;
+  padding: 2px;
   max-height: 36px;
   max-width: 36px;
   height: auto;
   width: auto;
-  border: 4px solid black;
+  border: 2px solid black;
   border-radius: 8px;
 }
 
 #controls {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 20px;
 }
 
 #quote-content-wrapper {
+  width: 60vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
