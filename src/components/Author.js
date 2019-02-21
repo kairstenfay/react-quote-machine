@@ -1,17 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Author extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
+const Author = function(props) {
     return (
         <p id="author">
-          {this.props.author}
+            {props.author}
         </p>
     )
-  }
-}
+};
 
 export default Author;

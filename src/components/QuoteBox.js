@@ -3,8 +3,6 @@ import React, { Component } from 'react';
 import Quote from './Quote';
 import Author from './Author';
 
-
-
 class QuoteBox extends Component {
     constructor(props) {
         super(props);
@@ -29,9 +27,10 @@ class QuoteBox extends Component {
 
         fetch(url, {cache: "reload"}).then(response => response.json())
             .then(data => {
-                let quote = data[0].content.replace(/<\/?[^>]+(>|$)/g, "").trim();
-                quote = quote.replace(/;/g, ",");
-                quote = quote.replace(/&#8217[;,.]/g, "'");
+                let raw = data[0].content;
+                let txt = document.createElement("textarea");
+                txt.innerHTML = raw;
+                let quote = txt.value.replace(/<\/?p>/g, "").trim();
 
                 this.setState({
                     // TODO: encoding on apostrophe

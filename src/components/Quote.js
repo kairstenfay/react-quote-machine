@@ -1,18 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Quote extends Component {  // functional components since these are so simple
-  // look into peer component: only update when props not the same
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
+const Quote = function(props) {
     return (
         <p id="text">
-          {this.props.quote}
+          {props.quote}
         </p>
     )
-  }
-}
+};
 
 export default Quote;
