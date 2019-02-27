@@ -11,7 +11,7 @@ class QuoteBox extends Component {
         this.state = {
             quote: '',
         };
-        this.tweetQuote = this.tweetQuote.bind(this);
+        // this.tweetQuote = this.tweetQuote.bind(this);
         this.getQuote = this.getQuote.bind(this);
     }
 
@@ -32,21 +32,27 @@ class QuoteBox extends Component {
                 let raw = data[0].content;
                 let txt = document.createElement("textarea");
                 txt.innerHTML = raw;
+
                 let quote = txt.value.replace(/<\/?p>/g, "").trim();
+                let author = data[0].title.replace(/<\/?p>/g, "").trim();
+                // TODO: break into separate decoding function; unit test
 
                 this.setState({
-                    // TODO: encoding on apostrophe
-                    author: data[0].title,
+                    author: author,
                     quote: quote,
                 });
             });
     }
 
-    tweetQuote() {
-        let newURL = 'https://twitter.com/intent/tweet?status="' + this.state.quote + '" --' + this.state.author;
-        console.log(newURL);
-        window.location = newURL;
-    }
+    /* This function currently removed in order to pass FCC's tests. I disagree
+        with their implementation, however, so I will keep this function here
+        for now.
+     */
+    // tweetQuote() {
+    //     let newURL = 'https://twitter.com/intent/tweet?status="' + this.state.quote + '" --' + this.state.author;
+    //     console.log(newURL);
+    //     window.location = newURL;
+    // }
 
     render() {
         return (
@@ -54,8 +60,8 @@ class QuoteBox extends Component {
                 <div id="controls">
                     <input type="image" class="img-button" name="submit" value="submit" src={shuffle} onClick={this.getQuote}
                            id="new-quote" />
-                    <input type="image" class="img-button" name="submit" value="submit" src={twitter} onClick={this.tweetQuote}
-                           id="tweet-quote"/>
+                  <a href={'https://twitter.com/intent/tweet?status="' + this.state.quote + '" --' + this.state.author}
+                     id="tweet-quote"><img class="img-button" src={twitter} /></a>
                 </div>
                 <div id="quote-content-wrapper">
                     <Quote quote={this.state.quote} />
