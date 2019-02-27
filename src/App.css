@@ -6,9 +6,10 @@
   min-height: 100vh;
   align-items: center;
   background-color: ghostwhite;
+  /*
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/1c/Quotation_Marks.svg');
-  background-repeat: repeat-x;
-  background-position: center;
+  background-size: 100vw 100vh;
+  */
 }
 
 /*@keyframes animatedBackground {*/
@@ -22,17 +23,44 @@
   /*background-color: #eee;*/
   /*animation: animatedBackground 80s linear infinite;*/
 /*}*/
+@media only screen and (min-width: 600px) {
+  #quote-box {
+    padding: 20px;
+    width: 60vw;
+    background-color: white;
+    border: 1px solid lightgrey;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+  }
 
-#quote-box {
-  padding: 20px;
-  width: 60vw;
-  min-height: 30vh;
-  background-color: white;
-  border: 1px solid lightgrey;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: center;
+  #controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+  }
+
+  #quote-content-wrapper {
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  #quote-box {
+    padding: 20px;
+    width: 60vw;
+    background-color: white;
+    border: 1px solid lightgrey;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  }
+
 }
 
 #text {
@@ -56,15 +84,4 @@
   border-radius: 8px;
 }
 
-#controls {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 20px;
-}
 
-#quote-content-wrapper {
-  width: 60vw;
-  display: flex;
-  flex-direction: column;
-}
