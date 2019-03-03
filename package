@@ -1,0 +1,4 @@
+"scripts" :{
+  "deploy": "aws s3 sync build/ s3://react-quote-machine",
+}
+

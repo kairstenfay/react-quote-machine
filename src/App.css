@@ -5,10 +5,10 @@
   justify-content: center;
   min-height: 100vh;
   align-items: center;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/1/1c/Quotation_Marks.svg') top left no-repeat,
+              url('https://upload.wikimedia.org/wikipedia/commons/1/1c/Quotation_Marks.svg') bottom right no-repeat;
   background-color: ghostwhite;
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/1c/Quotation_Marks.svg');
-  background-repeat: repeat-x;
-  background-position: center;
+
 }
 
 /*@keyframes animatedBackground {*/
