@@ -1,30 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
+@media only screen and (min-width: 450px) {
+  .App {
+    background: url('https://upload.wikimedia.org/wikipedia/commons/1/1c/Quotation_Marks.svg') top left no-repeat,
+    url('https://upload.wikimedia.org/wikipedia/commons/1/1c/Quotation_Marks.svg') bottom right no-repeat;
+  }
+}
+
 .App {
   display: flex;
   justify-content: center;
   min-height: 100vh;
   align-items: center;
-  background: url('https://upload.wikimedia.org/wikipedia/commons/1/1c/Quotation_Marks.svg') top left no-repeat,
-  url('https://upload.wikimedia.org/wikipedia/commons/1/1c/Quotation_Marks.svg') bottom right no-repeat;
   background-color: ghostwhite;
 }
 
-/*@keyframes animatedBackground {*/
-  /*from { background-position: 0 0; }*/
-  /*to { background-position: 100% 100%}*/
-/*}*/
-
-/*#animate-area	{*/
-  /*background-image: url("/img/quotation-marks.svg");*/
-  /*background-position: 0px;*/
-  /*background-color: #eee;*/
-  /*animation: animatedBackground 80s linear infinite;*/
-/*}*/
 @media only screen and (min-width: 600px) {
   #quote-box {
     padding: 20px;
     width: 60vw;
+    min-height: 40vh;
+    min-width: 495px;
     background-color: white;
     border: 1px solid lightgrey;
     display: flex;
@@ -80,6 +76,12 @@
   width: auto;
   border: 2px solid black;
   border-radius: 8px;
+}
+
+#logo {
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }
 
 
